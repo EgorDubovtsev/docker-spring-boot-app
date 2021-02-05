@@ -12,12 +12,8 @@ services:
       - './logs:/logs'
   postgresdb:
     image: postgres
-    environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=test1
-      - POSTGRES_DB=postgres
     restart: always
     ports:
-      - "5432:5432"
+      - "8081:5432"
     volumes:
       - './database/data:/var/lib/postgresql/data'
